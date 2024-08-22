@@ -4,6 +4,8 @@
 #' @param type Search type (e.g., "AllFields", "Title", "Author", "Subject"). Defaults to "AllFields".
 #' @param fields A vector of fields to return. Defaults to NULL, which returns all default fields.
 #' @param filters A vector of filter queries. Defaults to NULL.
+#' @param facets A vector of facets queries. Defaults to NULL.
+#' @param facetFilters A vector of facetFilters queries. Defaults to NULL
 #' @param sort Sort method. Defaults to "relevance,id asc".
 #' @param page The page number to retrieve. Defaults to 1.
 #' @param limit The number of records to return per page. Defaults to 20.
