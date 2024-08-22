@@ -1,6 +1,6 @@
 Package: FinnaR
 Title: R package for Finna API (One Line, Title Case)
-Version: 0.0.0.9000
+Version: 0.0.1.0000
 Authors@R: 
     person("Akewak", "Jeba", , "akjeba@utu.fi", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0007-1347-7552"))

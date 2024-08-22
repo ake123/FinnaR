@@ -12,6 +12,13 @@ The goal of FinnaR is to retrieve data from Finna API
 The devel version of FinnnaR can be installed from GitHub as follows:
 
 ```
+# Install FinnaR if not already installed
+if (!requireNamespace("FinnaR", quietly = TRUE)) {
+  remotes::install_github("ake123/FinnaR")
+}
+```
+
+```
 remotes::install_github("ake123/FinnaR")
 ```
 
@@ -21,21 +28,19 @@ The basic functionality of FinnaR can be explored as follows:
 ```
 # Load the package
 library(FinnaR)
-
 # Perform a simple search and print a table
+
 record <- search_finna("sibelius")
-record <-as.data.frame(search_record)
-knitr::kable(head(record))
+head(record)
 ```
-| Title                                                 | Author                | Year | Language   | Formats | Subjects | Library | Series
-|:---------------------------------------------------------------------------------------------|:-----------------|:--------|:--------------------|:----------------------------|:-----------|:---------|--------:|----------:|
-| 1 Sibelius favourites : Sibelius conducts Sibelius    | Sibelius, Jean        | 2001    | NA       | Äänite, CD  | orkesterimusiikki, Suomi  | Lapin kirjasto, Kemi, Kemin kirjasto | NA    
-| 2 SIBELIUS                                            | TAWASTSTJERNA, ERIK   | 1997    | fin      | Kirja, Kirja  | SIBELIUS  | Anders-kirjastot, Ullava | NA    
-| 3 Sibelius                                            | Tawaststjerna, Erik, Anhava, Tuomas, Heikinheimo, Seppo, Salmenhaara, Erkki  | 1997    | fin      | Kirja, Kirja  | Sibelius, Jean.; 1800-luku; 1900-luku; säveltäjät; elämäkerrat; henkilöhistoria; Suomi  | Anders-kirjastot, Kokkola, Kannu | NA    
-| 4 Sibelius                                            | Lampila, Hannu-Ilari  | 1984    | fin      | Kirja, Kirja  | Sibelius, Jean.  | Helka-kirjastot, Suomalaisen Kirjallisuuden Seura | NA    
-| 5 Sibelius                                            | Tawaststjerna, Erik, Tawaststjerna, Erik T., Anhava, Tuomas, Heikinheimo, Seppo  | 2003    | fin      | Kirja, Kirja  | 5 Sibelius, Jean,, 1865-1957.; 1900-luku; 1800-luku; 1800-talet; 1900-talet; Composers, Finland, biography.; säveltäjät; henkilöhistoria; taidemusiikki; kompositörer; personhistoria; konstmusik; Suomi; Järvenpää; Finland; Träskända
-  | Kansalliskirjasto, Arto | NA    
-| 6 Sibelius                                            | Ringbom, Nils-Eric, Jalas, Margareta, suom  | 1948    | fin      | Kirja, Kirja  | Sibelius, Jean.  | Kirkes-kirjastot, Tuusula, Järvenpää, Tuusulan pääkirjasto, Järvenpään kirjasto, 1, 1 | NA 
+| Title                                                 | Author                                                 | Year | Language | Formats      | Subjects                                                                                        | Library                                           | Series |
+|:------------------------------------------------------|:-------------------------------------------------------|:-----|:---------|:-------------|:------------------------------------------------------------------------------------------------|:--------------------------------------------------|:-------|
+| Sibelius favourites : Sibelius conducts Sibelius      | Sibelius, Jean                                         | 2001  | NA       | Äänite, CD   | orkesterimusiikki, Suomi                                                                       | Lapin kirjasto, Kemi, Kemin kirjasto             | NA     |
+| SIBELIUS                                              | TAWASTSTJERNA, ERIK                                    | 1997  | fin      | Kirja, Kirja  | SIBELIUS                                                                                       | Anders-kirjastot, Ullava                         | NA     |
+| Sibelius                                              | Tawaststjerna, Erik, Anhava, Tuomas, Heikinheimo, Seppo, Salmenhaara, Erkki | 1997  | fin      | Kirja, Kirja  | Sibelius, Jean.; 1800-luku; 1900-luku; säveltäjät; elämäkerrat; henkilöhistoria; Suomi         | Anders-kirjastot, Kokkola, Kannu                 | NA     |
+| Sibelius                                              | Lampila, Hannu-Ilari                                   | 1984  | fin      | Kirja, Kirja  | Sibelius, Jean.                                                                                | Helka-kirjastot, Suomalaisen Kirjallisuuden Seura | NA     |
+| Sibelius                                              | Tawaststjerna, Erik, Tawaststjerna, Erik T., Anhava, Tuomas, Heikinheimo, Seppo | 2003  | fin      | Kirja, Kirja  | Sibelius, Jean,, 1865-1957.; 1900-luku; 1800-luku; 1800-talet; 1900-talet; Composers, Finland, biography.; säveltäjät; henkilöhistoria; taidemusiikki; kompositörer; personhistoria; konstmusik; Suomi; Järvenpää; Finland; Träskända | Kansalliskirjasto, Arto                          | NA     |
+| Sibelius                                              | Ringbom, Nils-Eric, Jalas, Margareta, suom             | 1948  | fin      | Kirja, Kirja  | Sibelius, Jean.                                                                                | Kirkes-kirjastot, Tuusula, Järvenpää, Tuusulan pääkirjasto, Järvenpään kirjasto, 1, 1 | NA     |
 
 
 ## Code of Conduct
