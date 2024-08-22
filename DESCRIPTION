@@ -1,0 +1,27 @@
+Package: FinnaR
+Title: R package for Finna API (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("Akewak", "Jeba", , "akjeba@utu.fi", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0007-1347-7552"))
+Description: R package to retrieve data from Finna API (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+    dplyr,
+    httr,
+    jsonlite,
+    ggplot2,
+    purrr,
+    tibble,
+    curl
+Suggests: 
+    testthat (>= 3.0.0),
+    rmarkdown,
+    knitr
+URL: https://github.com/ake123/FinnaR
+BugReports: https://github.com/ake123/FinnaR/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Config/testthat/edition: 3
+VignetteBuilder: knitr
