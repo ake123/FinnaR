@@ -15,11 +15,11 @@
 #' print(records)
 #' @export
 #' @importFrom httr GET status_code content
-valid_languages <- c("fi", "sv", "en-gb", "en-us") # Define valid language codes
 
 get_finna_records <- function(ids, field = NULL, prettyPrint = FALSE, lng = "fi", page = 1, limit = 100) {
 
   # Validate language code
+  valid_languages <- c("fi", "sv", "en-gb", "en-us") # Define valid language codes
   if (!lng %in% valid_languages) {
     stop("Invalid language code: ", lng)
   }
