@@ -27,6 +27,10 @@ search_finna(
 
 \item{filters}{A vector of filter queries. Defaults to NULL.}
 
+\item{facets}{A vector of facets queries. Defaults to NULL.}
+
+\item{facetFilters}{A vector of facetFilters queries. Defaults to NULL}
+
 \item{sort}{Sort method. Defaults to "relevance,id asc".}
 
 \item{page}{The page number to retrieve. Defaults to 1.}
