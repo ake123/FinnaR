@@ -6,8 +6,8 @@ template:
   bootstrap: 5
 
 # Optional: Specify the title and description
-title: "Package Name"
-description: "A brief description of what the package does."
+title: "FinnaR"
+description: "A data retrieval package from Finna API"
 
 # Optional: Specify the structure of your site
 navbar:
