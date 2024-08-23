@@ -42,22 +42,20 @@ jobs:
       - name: Build site
         run: |
           echo 'Configuring _pkgdown.yml...'
-          cat <<EOT > ./_pkgdown.yml
-          navbar:
-            structure:
-              right:
-                - "GitHub"
-                - "Reference"
-            links:
-              - title: "GitHub"
-                href: https://github.com/ake123/FinnaR
-              - title: "Reference"
-                href: reference/index.html
-          template:
-            bootstrap: 5
-          EOT
+          echo "navbar:" > ./_pkgdown.yml
+          echo "  structure:" >> ./_pkgdown.yml
+          echo "    right:" >> ./_pkgdown.yml
+          echo "      - 'GitHub'" >> ./_pkgdown.yml
+          echo "      - 'Reference'" >> ./_pkgdown.yml
+          echo "  links:" >> ./_pkgdown.yml
+          echo "    - title: 'GitHub'" >> ./_pkgdown.yml
+          echo "      href: 'https://github.com/ake123/FinnaR'" >> ./_pkgdown.yml
+          echo "    - title: 'Reference'" >> ./_pkgdown.yml
+          echo "      href: 'reference/index.html'" >> ./_pkgdown.yml
+          echo "template:" >> ./_pkgdown.yml
+          echo "  bootstrap: 5" >> ./_pkgdown.yml
           Rscript -e 'pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)'
-        shell: Rscript {0}
+        shell: bash
 
       - name: Deploy to GitHub pages 🚀
         if: github.event_name != 'pull_request'
