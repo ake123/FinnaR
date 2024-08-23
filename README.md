@@ -2,7 +2,7 @@
 
 [![issues](https://img.shields.io/github/issues/ake123/FinnaR)](https://github.com/ake123/FinnaR/issues)
 [![pulls](https://img.shields.io/github/issues-pr/ake123/FinnaR)](https://github.com/ake123/FinnaR/pulls)
-[![R-CMD-check](https://github.com/ake123/FinnaR/workflows/rworkflows/badge.svg)](https://github.com/ake123/FinnaR/actions)
+[![R-CMD-check](https://github.com/ake123/FinnaR/workflows/rworkflows/badge.svg)](https://github.com/ake123/FinnaR/blob/master/.github/workflows/check-standard..yml)
 [![codecov](https://codecov.io/gh/ake123/FinnaR/branch/devel/graph/badge.svg)](https://app.codecov.io/gh/ake123/FinnaR?branch=devel)
 [![codefactor](https://www.codefactor.io/repository/github/ake123/FinnaR/badge)](https://www.codefactor.io/repository/github/ake123/FinnaR)
 
