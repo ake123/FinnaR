@@ -25,7 +25,7 @@ remotes::install_github("ake123/FinnaR")
 ## Example
 The basic functionality of FinnaR can be explored as follows:
 
-```
+``` r
 # Load the package
 library(FinnaR)
 # Perform a simple search and print a table
