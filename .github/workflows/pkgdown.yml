@@ -18,6 +18,11 @@ jobs:
 
       - name: Install dependencies
         run: |
+          Rscript -e "install.packages('remotes')"
+          Rscript -e "remotes::install_cran('pkgdown')"
+
+      - name: Install dependencies
+        run: |
           install.packages('remotes')
           remotes::install_cran('pkgdown')
 
