@@ -31,7 +31,7 @@ library(FinnaR)
 # Perform a simple search and print a table
 
 record <- search_finna("sibelius")
-knitr::kable(head(record))
+head(record)
 ```
 | Title                                                                                        | Author           | Year | Language | Formats           | Subjects          | Library             | Series |
 |:---------------------------------------------------------------------------------------------|:-----------------|:-----|:---------|:------------------|:------------------|:--------------------|:-------|
