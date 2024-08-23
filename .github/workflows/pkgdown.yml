@@ -40,7 +40,23 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v2
 
       - name: Build site
-        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
+        run: |
+          echo 'Configuring _pkgdown.yml...'
+          cat <<EOT > ./_pkgdown.yml
+          navbar:
+            structure:
+              right:
+                - "GitHub"
+                - "Reference"
+            links:
+              - title: "GitHub"
+                href: https://github.com/ake123/FinnaR
+              - title: "Reference"
+                href: reference/index.html
+          template:
+            bootstrap: 5
+          EOT
+          Rscript -e 'pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)'
         shell: Rscript {0}
 
       - name: Deploy to GitHub pages 🚀
