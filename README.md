@@ -33,14 +33,15 @@ library(FinnaR)
 record <- search_finna("sibelius")
 head(record)
 ```
-| Title                             | Author        | Year | Language | Formats          | Subjects   | Library             | Series |
-|-----------------------------------|---------------|------|----------|------------------|------------|---------------------|--------|
-| Sibelius favourites: Sibelius c.. | Sibelius      | 2001 | N/A      | Äänite (audio)   | Orkeste... | Lapin | N/A    |
-| SIBELIUS                          | TAWASTSTJERNA | 1997 | Finnish  | Kirja (book)      | SIBELIUS   | Anders Chydenius    | N/A    |
-| Sibelius                          | TAWASTSTJERNA | 1997 | Finnish  | Kirja (book)      | Sibelius   | Anders Chydenius    | N/A    |
-| Sibelius                          | Lampila       | 1984 | Finnish  | Kirja (book)      | Sibelius   | Helka-arkisto       | N/A    |
-| Sibelius                          | TAWASTSTJERNA | 2003 | Finnish  | Kirja (book)      | Sibelius   | Kansalliskirjasto   | N/A    |
-| Sibelius                          | Ringbom       | 1948 | Finnish  | Kirja (book)      | Sibelius   | Kirkes              | N/A    |
+| Title                                                                                        | Author           | Year | Language | Formats           | Subjects          | Library             | Series |
+|:---------------------------------------------------------------------------------------------|:-----------------|:-----|:---------|:------------------|:------------------|:--------------------|:-------|
+| Sibelius favourites: Sibelius collection                                                     | Sibelius         | 2001 | N/A      | Äänite (audio)    | Orkesterimusiikki  | Lapin               | N/A    |
+| SIBELIUS                                                                                     | TAWASTSTJERNA    | 1997 | Finnish  | Kirja (book)      | SIBELIUS           | Anders Chydenius    | N/A    |
+| Sibelius                                                                                     | TAWASTSTJERNA    | 1997 | Finnish  | Kirja (book)      | Sibelius           | Anders Chydenius    | N/A    |
+| Sibelius                                                                                     | Lampila          | 1984 | Finnish  | Kirja (book)      | Sibelius           | Helka-arkisto       | N/A    |
+| Sibelius                                                                                     | TAWASTSTJERNA    | 2003 | Finnish  | Kirja (book)      | Sibelius           | Kansalliskirjasto   | N/A    |
+| Sibelius                                                                                     | Ringbom          | 1948 | Finnish  | Kirja (book)      | Sibelius           | Kirkes              | N/A    |
+
 
 
 ## Code of Conduct
