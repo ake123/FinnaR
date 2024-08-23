@@ -11,14 +11,14 @@ The goal of FinnaR is to retrieve data from Finna API
 ## Installation instructions
 The devel version of FinnnaR can be installed from GitHub as follows:
 
-```
+``` r
 # Install FinnaR if not already installed
 if (!requireNamespace("FinnaR", quietly = TRUE)) {
   remotes::install_github("ake123/FinnaR")
 }
 ```
 
-```
+``` r
 remotes::install_github("ake123/FinnaR")
 ```
 
