@@ -42,8 +42,10 @@ head(record)
 | Sibelius                                                                                     | TAWASTSTJERNA    | 2003 | Finnish  | Kirja (book)      | Sibelius           | Kansalliskirjasto   | N/A    |
 | Sibelius                                                                                     | Ringbom          | 1948 | Finnish  | Kirja (book)      | Sibelius           | Kirkes              | N/A    |
 
-
-
+``` r
+record <- search_finna("sibelius", sort = "main_date_str des")
+head(record)
+```
 ## Code of Conduct
 Please note that the FinnaR project is released with a
 [Contributor Code of Conduct](Link).
