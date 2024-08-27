@@ -2,7 +2,7 @@
 % Please edit documentation in R/search_finna.R
 \name{search_finna}
 \alias{search_finna}
-\title{Search Finna Index with Extended Options}
+\title{Finna Index Search with Advanced Options}
 \usage{
 search_finna(
   lookfor,
@@ -19,35 +19,45 @@ search_finna(
 )
 }
 \arguments{
-\item{lookfor}{Search terms. May include boolean operators.}
+\item{lookfor}{A string containing the search terms. Boolean operators (AND, OR, NOT) can be included.}
 
-\item{type}{Search type (e.g., "AllFields", "Title", "Author", "Subject"). Defaults to "AllFields".}
+\item{type}{A string specifying the type of search. Options include "AllFields", "Title", "Author", "Subject". Defaults to "AllFields".}
 
-\item{fields}{A vector of fields to return. Defaults to NULL, which returns all default fields.}
+\item{fields}{A vector of fields to be returned in the search results. Defaults to NULL, which returns a standard set of fields.}
 
-\item{filters}{A vector of filter queries. Defaults to NULL.}
+\item{filters}{A vector of filter queries to refine the search. Defaults to NULL.}
 
-\item{facets}{A vector of facets queries. Defaults to NULL.}
+\item{facets}{A vector specifying which facets to return in the results. Defaults to NULL.}
 
-\item{facetFilters}{A vector of facetFilters queries. Defaults to NULL}
+\item{facetFilters}{A vector of regular expressions to filter facets. Defaults to NULL.}
 
-\item{sort}{Sort method. Defaults to "relevance,id asc".}
+\item{sort}{A string defining the sort order of the results. Options include:
+\itemize{
+\item "relevance,id asc" (default)
+\item "main_date_str desc" (Year, newest first)
+\item "main_date_str asc" (Year, oldest first)
+\item "last_indexed desc" (Last modified)
+\item "first_indexed desc" (Last added)
+\item "callnumber,id asc" (Classmark)
+\item "author,id asc" (Author)
+\item "title,id asc" (Title)
+}}
 
-\item{page}{The page number to retrieve. Defaults to 1.}
+\item{page}{An integer indicating the page number of results to retrieve. Defaults to 1.}
 
-\item{limit}{The number of records to return per page. Defaults to 20.}
+\item{limit}{An integer specifying the number of records to return per page. Defaults to 20.}
 
-\item{lng}{Language for returned translated strings. Defaults to "fi".}
+\item{lng}{A string for the language of returned translated strings. Options are "fi", "en-gb", "sv", "se". Defaults to "fi".}
 
-\item{prettyPrint}{Logical; whether to pretty-print the response. Defaults to FALSE.}
+\item{prettyPrint}{A logical value indicating whether to pretty-print the JSON response. Useful for debugging. Defaults to FALSE.}
 }
 \value{
-A list containing the search results.
+A tibble containing the search results with relevant fields extracted. Returns NULL if the search fails or if the input is invalid.
 }
 \description{
-Search Finna Index with Extended Options
+This function performs a search on the Finna index with extended options, allowing for a wide range of search types, filters, facets, and sorting methods.
 }
 \examples{
-search_results <- search_finna("sibelius")
+search_results <- search_finna("sibelius", sort = "main_date_str desc")
 print(search_results)
 }
